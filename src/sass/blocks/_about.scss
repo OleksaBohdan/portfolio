@@ -32,6 +32,31 @@
     margin-top: 20px;
     font-size: 14px;
     line-height: 21px;
-    font-weight: 500;
+  }
+
+  &__skills {
+    display: grid;
+    grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
+    grid-template-rows: 1fr;
+    column-gap: 50px;
+    row-gap: 20px;
+    &-item {
+      display: grid;
+      grid-template-columns: 40px 200px;
+      column-gap: 20px;
+    }
+    &-circle {
+      position: relative;
+      padding: 15px 0 0 15px;
+      @include before_circle;
+      &::before {
+        top: 0;
+      }
+    }
+    &-text {
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 6px;
+    }
   }
 }
